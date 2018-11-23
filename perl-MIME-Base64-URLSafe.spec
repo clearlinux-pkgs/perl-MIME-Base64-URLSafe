@@ -4,7 +4,7 @@
 #
 Name     : perl-MIME-Base64-URLSafe
 Version  : 0.01
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libm/libmime-base64-urlsafe-perl/libmime-base64-urlsafe-perl_0.01-2.debian.tar.xz
