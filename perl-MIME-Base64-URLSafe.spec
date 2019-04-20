@@ -4,11 +4,11 @@
 #
 Name     : perl-MIME-Base64-URLSafe
 Version  : 0.01
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libm/libmime-base64-urlsafe-perl/libmime-base64-urlsafe-perl_0.01-2.debian.tar.xz
-Summary  : No detailed summary available
+Summary  : Perl version of Python's URL-safe base64 codec
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: perl-MIME-Base64-URLSafe-license = %{version}-%{release}
@@ -23,6 +23,7 @@ MIME::Base64::URLSafe is an URL-safe base64 encoder / decoder, compatible with p
 Summary: dev components for the perl-MIME-Base64-URLSafe package.
 Group: Development
 Provides: perl-MIME-Base64-URLSafe-devel = %{version}-%{release}
+Requires: perl-MIME-Base64-URLSafe = %{version}-%{release}
 
 %description dev
 dev components for the perl-MIME-Base64-URLSafe package.
@@ -41,7 +42,7 @@ license components for the perl-MIME-Base64-URLSafe package.
 cd ..
 %setup -q -T -D -n MIME-Base64-URLSafe-0.01 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/MIME-Base64-URLSafe-0.01/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/MIME-Base64-URLSafe-0.01/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
