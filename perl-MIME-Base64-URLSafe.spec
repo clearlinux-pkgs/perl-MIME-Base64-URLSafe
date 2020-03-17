@@ -4,7 +4,7 @@
 #
 Name     : perl-MIME-Base64-URLSafe
 Version  : 0.01
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KAZUHO/MIME-Base64-URLSafe-0.01.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libm/libmime-base64-urlsafe-perl/libmime-base64-urlsafe-perl_0.01-2.debian.tar.xz
@@ -78,7 +78,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-MIME-Base64-URLSafe
-cp %{_builddir}/MIME-Base64-URLSafe-0.01/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-MIME-Base64-URLSafe/79ed2898fb470f965433d6695ead7d09c05a6b8c
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-MIME-Base64-URLSafe/79ed2898fb470f965433d6695ead7d09c05a6b8c
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -102,4 +102,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/MIME/Base64/URLSafe.pm
+/usr/lib/perl5/vendor_perl/5.30.2/MIME/Base64/URLSafe.pm
